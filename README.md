@@ -1,4 +1,5 @@
 # angular-material-simple-list
+![CircleCI](https://circleci.com/gh/pxblue/simple-list.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
 

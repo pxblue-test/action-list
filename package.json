@@ -1,7 +1,6 @@
 {
   "name": "angular-template",
   "description": "",
-<<<<<<< HEAD
   "homepage": "https://stackblitz.com/edit/angular-material-scss-enra28",
   "dependencies": {
     "@angular/animations": "6.0.9",
@@ -22,26 +21,6 @@
     "@angular/cli": "6.0.8",
     "@types/jasmine": "2.8.8",
     "@angular/material": "6.4.0"
-=======
-  "homepage": "https://stackblitz.com/edit/angular-material-simple-list",
-  "dependencies": {
-    "@angular/animations": "4.4.3",
-    "@angular/common": "4.4.3",
-    "@angular/compiler": "4.4.3",
-    "@angular/core": "4.4.3",
-    "@angular/forms": "4.4.3",
-    "@angular/http": "4.4.3",
-    "@angular/platform-browser": "4.4.3",
-    "@angular/platform-browser-dynamic": "4.4.3",
-    "@angular/router": "4.4.3",
-    "core-js": "2.4.1",
-    "rxjs": "5.4.2",
-    "zone.js": "0.8.12",
-    "hammerjs": "2.0.8",
-    "@angular/cdk": "2.0.0-beta.12",
-    "@angular/material": "2.0.0-beta.12",
-    "web-animations-js": "2.3.1"
->>>>>>> 3cdee2219e4b9a40626ba9c29d3f6e5e50142f70
   },
   "version": "0.0.0",
   "license": "MIT",

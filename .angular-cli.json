@@ -1,11 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-<<<<<<< HEAD
-    "name": "angular-material-scss-enra28"
-=======
     "name": "angular-material-simple-list"
->>>>>>> 3cdee2219e4b9a40626ba9c29d3f6e5e50142f70
   },
   "apps": [
     {
@@ -23,11 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-<<<<<<< HEAD
         "theme.scss"
-=======
-        "styles.scss"
->>>>>>> 3cdee2219e4b9a40626ba9c29d3f6e5e50142f70
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

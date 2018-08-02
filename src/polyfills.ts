@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * This file includes polyfills needed by Angular and is loaded before the app.
  * You can add your own extra polyfills to this file.
@@ -66,10 +65,3 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  * Needed for: All but Chrome, Firefox, Edge, IE11 and Safari 10
  */
 // import 'intl';  // Run `npm install --save intl`.
-=======
-import 'core-js/es6/reflect';
-import 'core-js/es7/reflect';
-import 'zone.js/dist/zone';
-import 'hammerjs';
-import 'web-animations-js'
->>>>>>> 3cdee2219e4b9a40626ba9c29d3f6e5e50142f70

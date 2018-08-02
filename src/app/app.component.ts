@@ -2,11 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { VERSION, MatMenuTrigger } from '@angular/material';
 
 @Component({
-<<<<<<< HEAD
   selector: 'demo-app',
-=======
-  selector: 'material-app',
->>>>>>> 3cdee2219e4b9a40626ba9c29d3f6e5e50142f70
   templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css']
 

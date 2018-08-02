@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-# angular-material-scss-enra28
-=======
 # angular-material-simple-list
 [![CircleCI](https://circleci.com/gh/pxblue/simple-list.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list)
->>>>>>> 3cdee2219e4b9a40626ba9c29d3f6e5e50142f70
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
 

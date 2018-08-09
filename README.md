@@ -1,4 +1,5 @@
 # pxblue-list-actions-react
+[![CircleCI](https://circleci.com/gh/pxblue/simple-list.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list)
 
 [Edit this project on StackBlitz](https://stackblitz.com/edit/pxblue-list-actions-react)
 

@@ -6,4 +6,4 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run: npm test --single-run --no-progress
+      - run: npm test -- --single-run --no-progress

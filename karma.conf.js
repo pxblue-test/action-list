@@ -23,9 +23,9 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'junit'],
     junitReporter: {
-      ouputDir: 'test-results',
+      ouputDir: 'test-results/karma',
       outputFile: 'results.xml',
-      useBrowserName: true 
+      useBrowserName: false 
     },
     port: 9876,
     colors: true,

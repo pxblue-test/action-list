@@ -23,8 +23,9 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'junit'],
     junitReporter: {
-      outputFile: 'test-results.xml', // if included, results will be saved as $outputDir/$browserName/$outputFile
-      useBrowserName: false // add browser name to report and classes names
+      ouputDir: 'test-results',
+      outputFile: 'results.xml',
+      useBrowserName: true 
     },
     port: 9876,
     colors: true,

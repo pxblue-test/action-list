@@ -22,5 +22,8 @@ jobs:
       - run:
           name: angular-test
           command: yarn test --watch=false --no-progress
+     - store_artifacts:
+          path: ./test-results/karma/results.xml
+          prefix: tests
       - store_test_results:
           path: test-results

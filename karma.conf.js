@@ -23,7 +23,7 @@ module.exports = function (config) {
     },
     reporters: ['progress', 'junit'],
     junitReporter: {
-      ouputDir: 'test-results/karma',
+      outputDir: 'test-results/karma',
       outputFile: 'results.xml',
       useBrowserName: false 
     },

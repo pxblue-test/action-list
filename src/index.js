@@ -3,4 +3,11 @@ import { render } from 'react-dom';
 import App from './App';
 import './style.css';
 
-render(<App />, document.getElementById('root'));
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {EatonColors, EatonThemes} from '@pxblue/themes/react/src';
+
+render(
+  <MuiThemeProvider theme={createMuiTheme(EatonThemes.blue)}>
+    <App />
+  </MuiThemeProvider>
+  , document.getElementById('root'));

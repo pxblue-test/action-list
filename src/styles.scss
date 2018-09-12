@@ -1,0 +1,8 @@
+@import '~@pxblue/themes/angular/src/eaton-theme';
+
+$custom-typography: mat-typography-config($font-family: 'OpenSans, Arial, Helvetica, sans-serif;');
+@include mat-core($custom-typography);
+
+body { 
+  margin: 0;
+}

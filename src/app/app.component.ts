@@ -2,10 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { VERSION, MatMenuTrigger } from '@angular/material';
 
 @Component({
-  selector: 'demo-app',
+  selector: 'material-app',
   templateUrl: 'app.component.html',
   styleUrls: ['./app.component.css']
-
 })
 export class AppComponent implements OnInit {
 

@@ -119,7 +119,7 @@ class SimpleList extends React.Component {
         {this.state.list.length < 1 && 
           this.getEmptyComponent()
         }
-        <List style={{paddingTop: '0px'}} component="nav">
+        <List className="list" style={{paddingTop: '0px'}} component="nav">
           {
             this.state.list.map((item, i) => {
               return (

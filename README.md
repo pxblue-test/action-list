@@ -2,7 +2,7 @@
 
 [![CircleCI](https://circleci.com/gh/pxblue/simple-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list/tree/react)
 
-This is a sample application showing how to build a basic slide-out navigation drawer with routing.
+This is a sample application showing how to build a simple-list with delete and add actions.
 
 ## Running the example
 To run this example, first clone the repository. Each of our example projects comes with a branch for Angular and a branch for React. You can choose which branch to use when you clone the repository (or you can switch after cloning as well):

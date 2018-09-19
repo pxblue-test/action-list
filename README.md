@@ -1,7 +1,8 @@
-# Basic Simple-list Example
-[![CircleCI](https://circleci.com/gh/pxblue/simple-list.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list)
+# List with Inline Actions
 
-This is a sample application showing how to build a basic simple-list withh actions.
+[![CircleCI](https://circleci.com/gh/pxblue/simple-list/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list/tree/angular)
+
+This is a sample application showing how to build a list with actions available on individual list items.
 
 ## Running the example
 To run this example, first clone the repository. Each of our example projects comes with a branch for Angular and a branch for React. You can choose which branch to use when you clone the repository (or you can switch after cloning as well):

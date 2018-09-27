@@ -1,6 +1,6 @@
 # List with Inline Actions
 
-[![CircleCI](https://circleci.com/gh/pxblue/simple-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/simple-list/tree/react)
+[![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/angular)
 
 This is a sample application showing how to build a list with actions available on individual list items.
 

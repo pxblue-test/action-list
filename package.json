@@ -22,7 +22,7 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
-    "@pxblue/themes": "^1.0.8",
+    "@pxblue/themes": "^1.0.15",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
     "typeface-open-sans": "^0.0.54",

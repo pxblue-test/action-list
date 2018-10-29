@@ -86,7 +86,7 @@ class SimpleList extends React.Component {
   getEmptyComponent(){
     return (
       <div style={{paddingLeft: "10px"}}>
-        <Typography variant="display1">No Items Found</Typography>
+        <Typography variant="h4">No Items Found</Typography>
         <Button variant="contained" onClick={()=>this.onAddItem()}>Add an Item</Button>
       </div>
     );
@@ -99,7 +99,7 @@ class SimpleList extends React.Component {
       <div>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="title" color="inherit">
+            <Typography variant="h6" color="inherit">
               Simple List
           </Typography>
             <div style={{ flex: '1 1 0px' }} />

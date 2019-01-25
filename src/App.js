@@ -3,19 +3,14 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import Icon from '@material-ui/core/Icon';
-import MenuIcon from '@material-ui/icons/Menu';
 import AddIcon from '@material-ui/icons/Add';
 import DeleteIcon from '@material-ui/icons/Delete';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import './style.css';
 
@@ -42,7 +37,6 @@ class SimpleList extends React.Component {
       selectedIndex: null,
       activeMenu: null
     }
-
   }
 
   onAddItem() {
@@ -62,7 +56,7 @@ class SimpleList extends React.Component {
     this.setState({ menuposition: event.currentTarget, activeMenu: i });
   };
   onMenuItemClick(option, i) {
-    if (option == 'Delete') {
+    if (option === 'Delete') {
       let templist = this.state.list;
       templist.splice(i, 1);
       this.setState({ list: templist });

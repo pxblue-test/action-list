@@ -94,7 +94,7 @@ class SimpleList extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <Typography variant="h6" color="inherit">
-              Simple List
+              Action List
           </Typography>
             <div style={{ flex: '1 1 0px' }} />
             <IconButton

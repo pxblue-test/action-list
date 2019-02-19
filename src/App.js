@@ -21,7 +21,7 @@ const options = [
 
 const ITEM_HEIGHT = 48;
 
-class SimpleList extends React.Component {
+class ActionList extends React.Component {
   constructor(props) {
     super(props);
     let list = [];
@@ -153,4 +153,4 @@ class SimpleList extends React.Component {
   }
 }
 
-export default SimpleList;
+export default ActionList;

@@ -18,6 +18,13 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "Firefox ESR",
+    "IE 11",
+    "Edge 16",
+    "Safari 11"
+  ],
   "devDependencies": {
     "enzyme": "^3.4.0",
     "enzyme-adapter-react-16": "^1.2.0",

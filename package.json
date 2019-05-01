@@ -16,7 +16,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cy:run": "cypress run",
+    "cypress:open": "cypress open",
+    "cytest": "start-server-and-test start http://localhost:3000 cy:run"
   },
   "browserslist": [
     "last 2 Chrome versions",
@@ -26,8 +29,10 @@
     "Safari 11"
   ],
   "devDependencies": {
+    "cypress": "^3.2.0",
     "enzyme": "^3.4.0",
     "enzyme-adapter-react-16": "^1.2.0",
+    "start-server-and-test": "^1.9.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^3.1.14"
   }

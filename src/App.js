@@ -77,11 +77,11 @@ class ActionList extends React.Component {
     return this.state.selectedIndex === item;
   }
 
-  getEmptyComponent(){
+  getEmptyComponent() {
     return (
-      <div style={{paddingLeft: "10px"}}>
+      <div style={{ paddingLeft: "10px" }}>
         <Typography variant="h4">No Items Found</Typography>
-        <Button variant="contained" onClick={()=>this.onAddItem()}>Add an Item</Button>
+        <Button data-cy="add-item" variant="contained" onClick={() => this.onAddItem()}>Add an Item</Button>
       </div>
     );
   }
@@ -92,34 +92,34 @@ class ActionList extends React.Component {
     return (
       <div>
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar data-cy="pxb-toolbar">
             <Typography variant="h6" color="inherit">
               Action List
           </Typography>
             <div style={{ flex: '1 1 0px' }} />
-            <IconButton
+            <IconButton data-cy="toolbar-delete"
               color="inherit"
               aria-label="Delete"
               onClick={() => { this.onRemoveAll() }} >
               <DeleteIcon />
             </IconButton>
-            <IconButton
+            <IconButton data-cy="toolbar-add"
               color="inherit"
               aria-label="add" onClick={() => { this.onAddItem() }}>
               <AddIcon />
             </IconButton>
           </Toolbar>
         </AppBar>
-        {this.state.list.length < 1 && 
+        {this.state.list.length < 1 &&
           this.getEmptyComponent()
         }
-        <List className="list" style={{paddingTop: '0px'}} component="nav">
+        <List className="list" data-cy="list-content" style={{ paddingTop: '0px' }} component="nav">
           {
             this.state.list.map((item, i) => {
               return (
                 <ListItem key={'item_' + i} button className={this.isSelected(i) ? 'selected' : null} onClick={() => this.onSelected(i)}>
                   <ListItemText primary={item.name} secondary={item.details}></ListItemText>
-                  <IconButton
+                  <IconButton data-cy="action-menu"
                     aria-label='More'
                     aria-owns={menuposition ? 'long-menu' : null}
                     aria-haspopup="true"

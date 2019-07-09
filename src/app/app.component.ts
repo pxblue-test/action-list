@@ -24,11 +24,8 @@ export class AppComponent implements OnInit {
       this.data.push(this.createRandomItem());
     }
   }
-  onOpenMenu(menu: any): void {
-    console.log(menu);
-  }
+  onOpenMenu(menu: any): void {}
   onSelected(item: any) {
-    console.log(item);
     this.item = item;
   }
   isSelected(item: any) {

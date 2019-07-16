@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { VERSION, MatMenuTrigger } from '@angular/material';
+import { VERSION } from '@angular/material/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'material-app',

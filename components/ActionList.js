@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import * as Colors from '@pxblue/colors'
-import { Header, ListItem, Icon, Button, Text } from 'react-native-elements';
+import { Header, Icon, Button, Text } from 'react-native-elements';
 import ActionListItem from './ActionListItem';
 
 class ActionList extends React.Component {
@@ -40,8 +40,20 @@ class ActionList extends React.Component {
     deleteAll = () => this.setState({ data: [] });
     renderHeaderRightComponents = () => (
         <View style={styles.headerRightComponent}>
-            <Icon name="delete" onPress={this.deleteAll} color="#fff" />
-            <Icon name="add" onPress={this.addItem} color="#fff" />
+            <Button
+                icon={
+                    <Icon name="delete" color="#fff" />
+                }
+                type="clear"
+                onPress={this.deleteAll}
+            />
+            <Button
+                icon={
+                    <Icon name="add" color="#fff" />
+                }
+                type="clear"
+                onPress={this.addItem}
+            />
         </View>
     )
 
@@ -70,7 +82,7 @@ class ActionList extends React.Component {
                         : (
                             <View style={styles.noItems}>
                                 <Text h4>No Items found</Text>
-                                <Button onPress={this.addItem} title={'Add An Item'} />
+                                <Button onPress={this.addItem} title={'Add An Item'} style={{ paddingTop: 10 }} />
                             </View>
                         )
                 }
@@ -94,6 +106,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+
     }
 });
 export default ActionList;

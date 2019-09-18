@@ -1,10 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import * as Colors from '@pxblue/colors';
-import Menu, { MenuItem, MenuDivider } from 'react-native-material-menu';
-
-
+import { View } from 'react-native';
+import Menu, { MenuItem } from 'react-native-material-menu';
 import { ListItem, Icon } from 'react-native-elements';
+import * as Colors from "@pxblue/colors";
 
 class ActionListItem extends React.PureComponent {
     menu = null;
@@ -33,12 +31,12 @@ class ActionListItem extends React.PureComponent {
             <ListItem
                 title={item.name}
                 subtitle={item.details}
-                subtitleStyle={{ color: 'gray' }}
+                subtitleStyle={{ color: Colors.gray[500] }}
                 rightElement={() => (
                     <View>
                         <Menu
                             ref={this.setMenuRef}
-                            button={<Icon name="more-vert" onPress={this.showMenu} />}
+                            button={<Icon name="more-vert" onPress={this.showMenu} color={Colors.gray[500]} />}
                         >
                             <MenuItem onPress={this.onDelete}>Remove</MenuItem>
                             <MenuItem onPress={this.hideMenu}>View Details</MenuItem>

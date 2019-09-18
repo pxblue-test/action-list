@@ -15,14 +15,19 @@
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
     "react-native-elements": "^1.2.0",
+    "react-native-gesture-handler": "^1.4.1",
     "react-native-material-menu": "^1.0.0",
-    "react-native-web": "^0.11.4"
+    "react-native-web": "^0.11.4",
+    "react-test-renderer": "16.8.6"
   },
   "devDependencies": {
     "babel-preset-expo": "^6.0.0",
     "jest": "^24.8.0",
     "jest-expo": "^33.0.2",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "16.8.6"
+  },
+  "jest": {
+    "preset": "jest-expo"
   },
   "private": true,
   "name": "pxblue-action-list-reactnative",

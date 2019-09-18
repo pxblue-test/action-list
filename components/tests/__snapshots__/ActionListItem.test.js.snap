@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ActionListItem Tests  ActionListItem -1 Renders 1`] = `
+exports[`ActionListItem Tests  ActionListItem-1 Renders 1`] = `
 <View>
   <View
     style={

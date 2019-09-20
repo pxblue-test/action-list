@@ -23,7 +23,6 @@ describe('ActionListItem Tests ', function () {
         const tree = renderer.create(
             <ActionListItem item={item} />
         ).toJSON();
-        console.log("tree", tree)
         expect(tree).toMatchSnapshot();
     });
 });

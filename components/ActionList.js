@@ -2,7 +2,10 @@ import React from 'react';
 import { StyleSheet, View, FlatList } from 'react-native';
 import * as Colors from '@pxblue/colors'
 import { Header, Icon, Button, Text } from 'react-native-elements';
+
+
 import ActionListItem from './ActionListItem';
+import Empty from './Empty';
 
 class ActionList extends React.Component {
     constructor(props) {
@@ -71,19 +74,25 @@ class ActionList extends React.Component {
                             <FlatList
                                 data={this.state.data}
                                 keyExtractor={(item, index) => `${index}`}
-                                renderItem={({ item }) => (
+                                renderItem={({ item, index }) => (
                                     <ActionListItem
                                         item={item}
+                                        index={index}
                                         onDelete={this.onDelete}
                                     />
                                 )}
                             />
                         )
                         : (
-                            <View style={styles.noItems}>
-                                <Text h4>No Items found</Text>
-                                <Button onPress={this.addItem} title={'Add An Item'} style={{ paddingTop: 10 }} />
-                            </View>
+                            <Empty
+                                title={'No Items found'}
+                                actions={
+                                    <Button
+                                        icon={<Icon name="add" color={Colors.white[500]} />}
+                                        onPress={this.addItem} title={'Add An Item'}
+                                    />
+                                }
+                            />
                         )
                 }
 

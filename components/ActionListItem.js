@@ -1,49 +1,63 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import Menu, { MenuItem } from 'react-native-material-menu';
 import { ListItem, Icon } from 'react-native-elements';
 import * as Colors from "@pxblue/colors";
+import Modal from 'react-native-modal';
 
 class ActionListItem extends React.PureComponent {
-    menu = null;
+    constructor(props) {
+        super(props);
+        this.state = {
+            isModalVisible: false,
+        }
+    }
 
-    setMenuRef = ref => {
-        this._menu = ref;
-    };
+    hideModal = () => this.setState({ isModalVisible: false });
 
-    hideMenu = () => {
-        this._menu.hide();
-    };
-
-    showMenu = () => {
-        this._menu.show();
-    };
+    showModal = () => this.setState({ isModalVisible: true });
 
     onDelete = () => {
         this.props.onDelete(this.props.index);
-        this.hideMenu();
+        this.hideModal();
     }
 
 
     render() {
         const { item } = this.props;
         return (
-            <ListItem
-                title={item.name}
-                subtitle={item.details}
-                subtitleStyle={{ color: Colors.gray[500] }}
-                rightElement={() => (
-                    <View>
-                        <Menu
-                            ref={this.setMenuRef}
-                            button={<Icon name="more-vert" onPress={this.showMenu} color={Colors.gray[500]} />}
-                        >
-                            <MenuItem onPress={this.onDelete}>Remove</MenuItem>
-                            <MenuItem onPress={this.hideMenu}>View Details</MenuItem>
-                        </Menu>
+            <>
+                <ListItem
+                    title={item.name}
+                    subtitle={item.details}
+                    subtitleStyle={{ color: Colors.gray[500] }}
+                    rightElement={() => (<Icon name="more-vert" onPress={this.showModal} color={Colors.gray[500]} />)}
+                />
+                <Modal
+                    isVisible={this.state.isModalVisible}
+                    backdropOpacity={0.5}
+                    supportedOrientations={['portrait', 'landscape']}
+                    style={{ justifyContent: 'flex-end', margin: 0 }}
+                >
+                    <View style={{ backgroundColor: Colors.white[500] }}>
+                        <ListItem
+                            title={'Edit Details'}
+                            leftIcon={{ name: 'edit' }}
+                        />
+                        <ListItem
+                            title={'Remove'}
+                            leftIcon={{ name: 'cancel' }}
+                            onPress={this.onDelete}
+                        />
+                        <ListItem
+                            title={'Cancel'}
+                            leftIcon={{ name: 'clear' }}
+                            onPress={this.hideModal}
+                        />
+
                     </View>
-                )}
-            />
+                </Modal>
+            </>
         )
     }
 };

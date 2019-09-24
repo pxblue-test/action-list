@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, FlatList } from 'react-native';
+import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
 import * as Colors from '@pxblue/colors'
-import { Header, Icon, Button, Text } from 'react-native-elements';
-
+import { Header, Icon, Button, ListItem } from 'react-native-elements';
+import Modal from 'react-native-modal';
 
 import ActionListItem from './ActionListItem';
 import Empty from './Empty';
@@ -12,8 +12,14 @@ class ActionList extends React.Component {
         super(props);
         this.state = {
             data: this.prepareData(),
+            isModalVisible: false,
+            selectedItemIndex: null,
         }
     }
+
+    hideModal = () => this.setState({ isModalVisible: false, selectedItemIndex: null });
+
+    showModal = (selectedItemIndex) => this.setState({ isModalVisible: true, selectedItemIndex });
 
     prepareData = () => {
         const data = [];
@@ -34,25 +40,27 @@ class ActionList extends React.Component {
         }));
     }
 
-    onDelete = (index) => {
+    onDelete = () => {
         const data = [...this.state.data];
-        data.splice(index, 1);
+        data.splice(this.state.selectedItemIndex, 1);
         this.setState({ data });
+        this.hideModal();
     }
 
     deleteAll = () => this.setState({ data: [] });
+
     renderHeaderRightComponents = () => (
         <View style={styles.headerRightComponent}>
             <Button
                 icon={
-                    <Icon name="delete" color="#fff" />
+                    <Icon name="delete" color={Colors.white[500]} />
                 }
                 type="clear"
                 onPress={this.deleteAll}
             />
             <Button
                 icon={
-                    <Icon name="add" color="#fff" />
+                    <Icon name="add" color={Colors.white[500]} />
                 }
                 type="clear"
                 onPress={this.addItem}
@@ -65,7 +73,7 @@ class ActionList extends React.Component {
             <View style={styles.container}>
                 <Header
                     backgroundColor={Colors.blue[500]}
-                    centerComponent={{ text: 'Action List', style: { color: '#fff', fontSize: 16, } }}
+                    centerComponent={{ text: 'Action List', style: { color: Colors.white[500], fontSize: 16, } }}
                     rightComponent={this.renderHeaderRightComponents}
                 />
                 {
@@ -78,7 +86,7 @@ class ActionList extends React.Component {
                                     <ActionListItem
                                         item={item}
                                         index={index}
-                                        onDelete={this.onDelete}
+                                        showModal={this.showModal}
                                     />
                                 )}
                             />
@@ -95,7 +103,32 @@ class ActionList extends React.Component {
                             />
                         )
                 }
+                <SafeAreaView>
+                    <Modal
+                        isVisible={this.state.isModalVisible}
+                        backdropOpacity={0.5}
+                        supportedOrientations={['portrait', 'landscape']}
+                        style={{ justifyContent: 'flex-end', margin: 0 }}
+                    >
+                        <View style={{ backgroundColor: Colors.white[500] }}>
+                            <ListItem
+                                title={'Edit Details'}
+                                leftIcon={{ name: 'edit' }}
+                            />
+                            <ListItem
+                                title={'Remove'}
+                                leftIcon={{ name: 'cancel' }}
+                                onPress={this.onDelete}
+                            />
+                            <ListItem
+                                title={'Cancel'}
+                                leftIcon={{ name: 'clear' }}
+                                onPress={this.hideModal}
+                            />
 
+                        </View>
+                    </Modal>
+                </SafeAreaView>
             </View>
 
         )
@@ -105,7 +138,7 @@ class ActionList extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: Colors.white[500],
     },
     headerRightComponent: {
         flex: 1,

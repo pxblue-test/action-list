@@ -1,4 +1,8 @@
 {
+  "private": true,
+  "name": "pxblue-action-list-reactnative",
+  "version": "0.0.0",
+  "author": "PX Blue <pxblue@eaton.com>",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -9,18 +13,27 @@
     "test": "jest"
   },
   "dependencies": {
+    "@pxblue/colors": "^1.0.13",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "expo": "^34.0.1",
+    "jsdom": "^15.1.1",
+    "jest-enzyme": "7.1.1",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
-    "react-native-web": "^0.11.4",
-    "@pxblue/colors": "^1.0.13"
+    "react-native-elements": "^1.2.0",
+    "react-native-gesture-handler": "1.4.1",
+    "react-native-modal": "^11.3.1",
+    "react-test-renderer": "16.8.6"
   },
   "devDependencies": {
     "babel-preset-expo": "^6.0.0",
     "jest": "^24.8.0",
     "jest-expo": "^33.0.2",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "16.8.6"
   },
-  "private": true
+  "jest": {
+    "preset": "jest-expo"
+  }
 }

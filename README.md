@@ -1,12 +1,12 @@
-# Action-List Example
+# Action List Example
 This project demonstrates how to build a list with actions available on individual list items.
 
 | Framework           | Status       | Live Examples  |
 | ---------------- |--------------|------------------|
-| Angular | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/angular) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-action-list-angular)
-| React | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/react) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-action-list-react)
-| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/ionic) | [View on Stackblitz](https://stackblitz.com/edit/pxblue-action-list-ionic)
-| React Native | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/reactnative) | [View on Snack](https://snack.expo.io/@px-blue/action-list-reactnative)
+| Angular | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/angular) | [View on Stackblitz](https://stackblitz.com/github/pxblue/action-list/tree/angular)
+| React | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/react) | [View on Code Sandbox](https://codesandbox.io/s/github/pxblue/action-list/tree/react)
+| Ionic | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/ionic) | [View on Stackblitz](https://stackblitz.com/github/pxblue/action-list/tree/ionic)
+| React Native | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/action-list@reactnative)
 
 ## Running the Example
 ### Angular
@@ -33,6 +33,7 @@ yarn && ionic serve
 ```
 To run on a device, add the platform then build and run the project:
 ```
+ionic cordova resources
 ionic cordova platform add [android|ios]
 ionic cordova build [android|ios]
 ionic cordova run [android|ios]

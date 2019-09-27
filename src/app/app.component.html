@@ -1,3 +1,38 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+    <ion-toolbar flexLayout="row">
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <ion-title>
+          <div>Action List</div>
+        </ion-title>
+        <ion-buttons style="margin-right: 15px" slot="end">
+          <ion-button fill="clear">
+            <mat-icon id='delete-icon' (click)="onRemoveAll()" >delete</mat-icon>
+          </ion-button>
+          <ion-button fill="clear">
+              <mat-icon id='add-icon' (click)="onAddItem()">add</mat-icon>
+            </ion-button>
+        </ion-buttons>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <mat-nav-list *ngIf="data.length > 0">
+      <mat-list-item *ngFor="let dataEl of data" [ngClass]="{'selected': isSelected(dataEl)}"
+        (click)="onSelected(dataEl)">
+        <div mat-line>Item {{ dataEl.id }}</div>
+        <p mat-line>{{ dataEl.details }}</p>
+        <mat-icon [id]="'menu-icon-'+dataEl.id" (click)="selectAction(dataEl)">more_vert</mat-icon>
+      </mat-list-item>
+    </mat-nav-list>
+
+    <div style="height: 100%" *ngIf="data.length == 0">
+      <empty-state [title]="'No Items found'">
+        <button mat-raised-button color="primary" action (click)="onAddItem()">
+          <mat-icon>add</mat-icon> Add An Item
+        </button>
+      </empty-state>
+    </div>
+  </ion-content>
 </ion-app>

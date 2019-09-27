@@ -24,3 +24,32 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import '~@pxblue/colors/palette.scss';
+
+html, body { 
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+ion-header, ion-toolbar {
+    color: map-get($pxb-white, 50);
+    --color : map-get($pxb-white, 50);
+    --background: map-get($pxb-blue, 500); 
+    background: map-get($pxb-blue, 500);
+    font-family: Open Sans, sans-serif;    
+}
+
+ion-button{
+    color: map-get($pxb-white, 50);
+    --color : map-get($pxb-white, 50);
+    --background : map-get($pxb-blue, 500);
+    --background-activated :  map-get($pxb-blue, 500);
+    --background-focused : map-get($pxb-blue, 500);
+    --background-hover : map-get($pxb-blue, 500);
+  }
+
+.bottomsheet .action-sheet-icon{
+    padding-bottom: 0;
+}

@@ -18,7 +18,6 @@
 ## Ionic
 .idea/
 .ionic/
-config.xml
 resources/ios/icon
 resources/ios/splash
 resources/android/icon

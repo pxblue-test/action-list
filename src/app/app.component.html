@@ -28,11 +28,11 @@
     </mat-nav-list>
 
     <div style="height: 100%" *ngIf="data.length == 0">
-      <empty-state [title]="'No Items found'">
-        <button mat-raised-button color="primary" action (click)="onAddItem()">
+      <pxb-empty-state [title]="'No Items found'">
+        <button mat-raised-button color="primary" actions (click)="onAddItem()">
           <mat-icon>add</mat-icon> Add An Item
         </button>
-      </empty-state>
+      </pxb-empty-state>
     </div>
   </ion-content>
 </ion-app>

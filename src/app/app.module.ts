@@ -7,13 +7,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { EmptyStateComponent } from './components/empty-state.component';
 import { MatIconModule, MatButtonModule, MatToolbarModule, MatListModule } from '@angular/material';
+import {EmptyStateModule} from '@pxblue/angular-components';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [AppComponent, EmptyStateComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -26,7 +26,8 @@ import { AppComponent } from './app.component';
     MatToolbarModule,
     MatListModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    EmptyStateModule
   ],
   providers: [
     StatusBar,

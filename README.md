@@ -6,7 +6,7 @@ This project demonstrates how to build a list with actions available on individu
 | Angular | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/angular.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/angular) | [View on Stackblitz](https://stackblitz.com/github/pxblue/action-list/tree/angular)
 | React | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/react.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/react) | [View on Code Sandbox](https://codesandbox.io/s/github/pxblue/action-list/tree/react)
 | Ionic | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/ionic.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/ionic) | [View on Stackblitz](https://stackblitz.com/github/pxblue/action-list/tree/ionic)
-| React Native | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/action-list@reactnative)
+| React Native | [![CircleCI](https://circleci.com/gh/pxblue/action-list/tree/reactnative.svg?style=shield)](https://circleci.com/gh/pxblue/action-list/tree/reactnative) | [View on Snack](https://snack.expo.io/@git/github.com/pxblue/action-list@reactnative?preview=true&platform=ios)
 
 ## Running the Example
 ### Angular

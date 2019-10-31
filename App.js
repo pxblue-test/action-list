@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import ActionList from './components/ActionList';
 import { ThemeProvider } from '@pxblue/react-native-components';
-import * as PXBThemes from '@pxblue/themes/react-native';
+import { ReactNative } from '@pxblue/themes';
 import * as Font from 'expo-font';
 
 export default class App extends React.Component {
@@ -30,7 +30,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         {
           this.state.fontLoaded ? (
-            <ThemeProvider theme={PXBThemes.expoBlue}>
+            <ThemeProvider theme={ReactNative.expoBlue}>
               <ActionList />
             </ThemeProvider>
           ) : null}

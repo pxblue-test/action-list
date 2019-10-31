@@ -1037,10 +1037,10 @@
     react-native-keyboard-aware-scroll-view "^0.8.0"
     react-native-status-bar-height "^2.3.1"
 
-"@pxblue/themes@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@pxblue/themes/-/themes-2.2.0.tgz#3e33e20526269a55f92f1ad4255093807b7b8c8a"
-  integrity sha512-5iH9bhtxo575pnUxG+z/l6DPGgOiwIaocsyrmpNBh82pH1TdTQFLCqgCpJ4DduaI1s/PkbpcL0aCnrLGEDBsiQ==
+"@pxblue/themes@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@pxblue/themes/-/themes-2.2.2.tgz#af0e9dc9c376ef416dc4f8b782839dc364dc3db7"
+  integrity sha512-txFitzchJoGxerFpFw7DxLMbGmeijcCkIvVURJ5hzdYR96lhR3l2cSRAlpx5Q66NbUHmU3PJOznTviDVH4bGpA==
   dependencies:
     "@pxblue/colors" "^1.0.13"
     typeface-open-sans "^0.0.54"

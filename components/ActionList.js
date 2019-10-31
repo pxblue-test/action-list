@@ -5,7 +5,7 @@ import { Header, Icon, Button, ListItem } from 'react-native-elements';
 import Modal from 'react-native-modal';
 
 import ActionListItem from './ActionListItem';
-import Empty from './Empty';
+import { EmptyState } from '@pxblue/react-native-components'
 
 class ActionList extends React.Component {
     constructor(props) {
@@ -92,7 +92,7 @@ class ActionList extends React.Component {
                             />
                         )
                         : (
-                            <Empty
+                            <EmptyState
                                 title={'No Items found'}
                                 actions={
                                     <Button

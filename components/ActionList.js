@@ -51,6 +51,10 @@ class ActionList extends React.Component {
         this.hideModal();
     }
 
+    deleteAll = () => {
+        this.setState({data: []});
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -58,7 +62,7 @@ class ActionList extends React.Component {
                     title={'Action List'}
                     navigation={{ icon: MenuIcon, onPress: () => { } }}
                     actionItems={[
-                        { icon: DeleteIcon, onPress: () => this.setState({ data: [] }) },
+                        { icon: DeleteIcon, onPress: this.deleteAll },
                         { icon: AddIcon, onPress: this.addItem },
                     ]}
                 />

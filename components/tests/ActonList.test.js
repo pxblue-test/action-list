@@ -1,14 +1,10 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
 import Modal from 'react-native-modal';
 
 import Adapter from 'enzyme-adapter-react-16';
 
 import ActionList from '../ActionList';
-import { ListItem } from 'react-native-elements';
-import { FlatList } from 'react-native';
-import ActionListItem from '../ActionListItem';
 Enzyme.configure({ adapter: new Adapter() })
 
 describe('ActionList Tests ', function () {

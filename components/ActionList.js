@@ -1,11 +1,15 @@
 import React from 'react';
 import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
-import * as Colors from '@pxblue/colors'
-import { Header, Icon, Button, ListItem } from 'react-native-elements';
+import { Icon, Button, ListItem } from 'react-native-elements';
 import Modal from 'react-native-modal';
 
-import ActionListItem from './ActionListItem';
-import Empty from './Empty';
+import * as Colors from '@pxblue/colors'
+import { EmptyState, Header, InfoListItem, wrapIcon } from '@pxblue/react-native-components';
+
+const DeleteIcon = wrapIcon({ IconClass: Icon, name: 'delete' });
+const AddIcon = wrapIcon({ IconClass: Icon, name: 'add' });
+const MenuIcon = wrapIcon({ IconClass: Icon, name: 'menu' });
+
 
 class ActionList extends React.Component {
     constructor(props) {
@@ -31,7 +35,7 @@ class ActionList extends React.Component {
 
     createRandomItem = () => {
         const randomInt = parseInt((Math.random() * 100) + '', 10);
-        return { id: randomInt, name: `Item ${randomInt}`, details: `Item ${randomInt} occured` };
+        return { id: randomInt, name: `Item ${randomInt}`, details: `Item ${randomInt} occurred` };
     }
 
     addItem = () => {
@@ -47,34 +51,20 @@ class ActionList extends React.Component {
         this.hideModal();
     }
 
-    deleteAll = () => this.setState({ data: [] });
-
-    renderHeaderRightComponents = () => (
-        <View style={styles.headerRightComponent}>
-            <Button
-                icon={
-                    <Icon name="delete" color={Colors.white[500]} />
-                }
-                type="clear"
-                onPress={this.deleteAll}
-            />
-            <Button
-                icon={
-                    <Icon name="add" color={Colors.white[500]} />
-                }
-                type="clear"
-                onPress={this.addItem}
-            />
-        </View>
-    )
+    deleteAll = () => {
+        this.setState({data: []});
+    }
 
     render() {
         return (
             <View style={styles.container}>
                 <Header
-                    backgroundColor={Colors.blue[500]}
-                    centerComponent={{ text: 'Action List', style: { color: Colors.white[500], fontSize: 16, } }}
-                    rightComponent={this.renderHeaderRightComponents}
+                    title={'Action List'}
+                    navigation={{ icon: MenuIcon, onPress: () => { } }}
+                    actionItems={[
+                        { icon: DeleteIcon, onPress: this.deleteAll },
+                        { icon: AddIcon, onPress: this.addItem },
+                    ]}
                 />
                 {
                     this.state.data.length
@@ -83,16 +73,19 @@ class ActionList extends React.Component {
                                 data={this.state.data}
                                 keyExtractor={(item, index) => `${index}`}
                                 renderItem={({ item, index }) => (
-                                    <ActionListItem
-                                        item={item}
-                                        index={index}
-                                        showModal={this.showModal}
+                                    <InfoListItem
+                                        title={item.name}
+                                        hidePadding={true}
+                                        subtitle={item.details}
+                                        backgroundColor={Colors.white[50]}
+                                        rightComponent={<Icon name="more-vert" onPress={() => this.showModal(index)} color={Colors.black[500]} />}
                                     />
                                 )}
+
                             />
                         )
                         : (
-                            <Empty
+                            <EmptyState
                                 title={'No Items found'}
                                 actions={
                                     <Button
@@ -110,22 +103,24 @@ class ActionList extends React.Component {
                         supportedOrientations={['portrait', 'landscape']}
                         style={{ justifyContent: 'flex-end', margin: 0 }}
                     >
-                        <View style={{ backgroundColor: Colors.white[500] }}>
+                        <View style={{ backgroundColor: Colors.white[50] }}>
                             <ListItem
+                                titleStyle={{ color: Colors.black[500] }}
                                 title={'Edit Details'}
                                 leftIcon={{ name: 'edit' }}
                             />
                             <ListItem
+                                titleStyle={{ color: Colors.black[500] }}
                                 title={'Remove'}
                                 leftIcon={{ name: 'cancel' }}
                                 onPress={this.onDelete}
                             />
                             <ListItem
+                                titleStyle={{ color: Colors.black[500] }}
                                 title={'Cancel'}
                                 leftIcon={{ name: 'clear' }}
                                 onPress={this.hideModal}
                             />
-
                         </View>
                     </Modal>
                 </SafeAreaView>
@@ -138,7 +133,7 @@ class ActionList extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.white[500],
+        backgroundColor: Colors.white[50],
     },
     headerRightComponent: {
         flex: 1,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Platform } from 'react-native';
 import ActionList from './components/ActionList';
 import { ThemeProvider } from '@pxblue/react-native-components';
 import { ReactNative } from '@pxblue/themes';
@@ -43,5 +43,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    marginTop: Platform.OS === 'android' : 24 : 0
   },
 });

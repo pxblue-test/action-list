@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    marginTop: Platform.OS === 'android' : 24 : 0
+    marginTop: Platform.OS === 'android' ? 24 : 0
   },
 });

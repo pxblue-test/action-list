@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Platform } from 'react-native';
 import ActionList from './components/ActionList';
 import { ThemeProvider } from '@pxblue/react-native-components';
-import { ReactNative } from '@pxblue/themes';
+import { ReactNativeThemes } from '@pxblue/themes';
 import * as Font from 'expo-font';
 
 export default class App extends React.Component {
@@ -16,11 +16,11 @@ export default class App extends React.Component {
   };
   async componentDidMount() {
     await Font.loadAsync({
-      'open-sans-extrabold': require('./assets/fonts/OpenSans-ExtraBold.ttf'),
-      'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
-      'open-sans-semibold': require('./assets/fonts/OpenSans-SemiBold.ttf'),
-      'open-sans-regular': require('./assets/fonts/OpenSans-Regular.ttf'),
-      'open-sans-light': require('./assets/fonts/OpenSans-Light.ttf'),
+      'OpenSans-Extrabold': require('./assets/fonts/OpenSans-ExtraBold.ttf'),
+      'OpenSans-Bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+      'OpenSans-SemiBold': require('./assets/fonts/OpenSans-SemiBold.ttf'),
+      'OpenSans-Regular': require('./assets/fonts/OpenSans-Regular.ttf'),
+      'OpenSans-Light': require('./assets/fonts/OpenSans-Light.ttf'),
     });
 
     this.setState({ fontLoaded: true });
@@ -30,7 +30,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         {
           this.state.fontLoaded ? (
-            <ThemeProvider theme={ReactNative.expoBlue}>
+            <ThemeProvider theme={ReactNativeThemes.blue}>
               <ActionList />
             </ThemeProvider>
           ) : null}
